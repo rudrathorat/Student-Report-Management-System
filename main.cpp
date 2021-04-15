@@ -3,7 +3,7 @@
 #include<iomanip>
 using namespace std;
 
-// the class that stores data
+
 class student
 {
 int rollno;
@@ -17,7 +17,7 @@ void getdata();
 void showdata() const;
 void calculate();
 int retrollno() const;
-}; //class ends here
+}; 
 
 void student::calculate()
 {
@@ -68,13 +68,13 @@ int  student::retrollno() const
 {
 return rollno;
 }
-//function declaration
+
 void create_student();
 void display_sp(int);//display particular record
 void display_all(); // display all records
 void delete_student(int);//delete particular record
 void change_student(int);//edit particular record
-//MAIN
+
 int main()
 {
 char ch;
@@ -91,7 +91,7 @@ cout<<"\n\n\t3. Display all students records ";
 cout<<"\n\n\t4.Delete student record";
 cout<<"\n\n\t5.Modify student record";
 cout<<"\n\n\t6.Exit";
-cout<<"\n\n\What is your Choice (1/2/3/4/5/6) ";
+cout<<"\n\n What is your Choice (1/2/3/4/5/6) ";
 cin>>ch;
 system("cls");
 switch(ch)
@@ -111,7 +111,6 @@ case '6': cout<<"Exiting, Thank you!";exit(0);
 }while(ch!='6');
 return 0;
 }
-//write student details to file
 void create_student()
 {
 student stud;
@@ -124,7 +123,7 @@ oFile.close();
 cin.ignore();
 cin.get();
 }
-// read file records
+
 void display_all()
 {
 student stud;
@@ -140,14 +139,14 @@ return;
 cout<<"\n\n\n\t\tDISPLAYING ALL RECORDS\n\n";
 while(inFile.read(reinterpret_cast<char *> (&stud), sizeof(student)))
 {
-st.showdata();
+stud.showdata();
 cout<<"\n\n====================================\n";
 }
 inFile.close();
 cin.ignore();
 cin.get();
 }
-//read specific record based on roll number
+
 void display_sp(int n)
 {
 student stud;
@@ -175,7 +174,7 @@ cout<<"\n\nrecord does not exist";
 cin.ignore();
 cin.get();
 }
-// modify record for specified roll number
+
 void change_student(int n)
 {
 bool found=false;
@@ -204,13 +203,13 @@ stud.getdata();
     found=true;
 }
 }
-File.close();
+fl.close();
 if(found==false)
 cout<<"\n\n Record Not Found ";
 cin.ignore();
 cin.get();
 }
-//delete record with particular roll number
+
 void delete_student(int n)
 {
 student stud;
