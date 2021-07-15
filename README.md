@@ -1,5 +1,7 @@
 # Student-Report-Management-System
 
+Student Management System is a basic C++ program for education establishments to manage student data and manage many other student-related data needs in a school. In this Student Management System project, the user can create, display, Modify.
+
 This is a project which i demonstrated with the help of my C++ skills. I created a simple report management system where
 - [x]  The student can record his report,
 - [x]  Search his record In this project, 
